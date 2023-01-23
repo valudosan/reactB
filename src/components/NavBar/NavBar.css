@@ -1,0 +1,8 @@
+li {
+  text-decoration: none;
+}
+
+li:hover {
+  color: rosybrown;
+  background-color: white;
+}
