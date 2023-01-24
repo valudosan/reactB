@@ -1,6 +1,6 @@
 import React from "react";
-import CardWidget from "../CardWidget/CardWidget";
-import "../NavBar/NavBar.css";
+import CartWidget from "../CartWidget/CartWidget";
+import "../Navbar/Navbar.css";
 
 function Navbar() {
   return (
@@ -21,20 +21,20 @@ function Navbar() {
       </button>
 
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+        <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ">
           <li className="nav-item active">
             <a className="nav-link" href="#">
-              Inicio <span className="sr-only"></span>
+              Inicio
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Categorias
+              Productos
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              <CardWidget />
+              <CartWidget />
             </a>
           </li>
         </ul>

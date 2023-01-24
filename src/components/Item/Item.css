@@ -1,0 +1,17 @@
+.item_container{
+     display:  grid;
+    grid-template-columns: auto auto auto;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 500px;
+    width: 160px;
+    margin-bottom: 10px;
+    text-align: justify;
+    margin:10px;
+   
+}
+
+.img_css{
+    height: 200px;
+    border-radius: 5px;
+}

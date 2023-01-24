@@ -1,8 +1,9 @@
 li {
   text-decoration: none;
+  margin: 5px 10px;
 }
 
 li:hover {
   color: rosybrown;
-  background-color: white;
+  background-color: rgb(72, 100, 190);
 }

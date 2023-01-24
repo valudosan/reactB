@@ -1,12 +1,11 @@
 import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 
-import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListConteiner/ItemListConteiner";
-
-function App() {
+function App(props) {
   return (
     <>
-      <NavBar />
+      <Navbar />
       <ItemListContainer title="Titulo de Ecommerce" />
     </>
   );
