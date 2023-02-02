@@ -1,12 +1,24 @@
-import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
-import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import { NavbarComponent } from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom/dist";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import CartContainer from "./components/CartContainer/CartContainer"
 
-function App(props) {
+
+
+function App() {
   return (
     <>
-      <Navbar />
-      <ItemListContainer title="Titulo de Ecommerce" />
+      <BrowserRouter>
+        <NavbarComponent />
+      <Routes>
+        <Route exact path={"/"} element={<ItemListContainer />}/>
+        <Route exact path={"/producto/:id"} element={<ItemDetailContainer/>}/>  
+        <Route exact path={"/:categoryId"} element={<ItemListContainer/>}/>  
+        <Route exact path={"/carrito"} element={<CartContainer/>}/>  
+      </Routes>
+        
+      </BrowserRouter>
     </>
   );
 }

@@ -1,46 +1,24 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import "../Navbar/Navbar.css";
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function Navbar() {
+
+import { Link } from "react-router-dom";
+
+export const NavbarComponent = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-      <a className="navbar-brand" href="#">
-        Logo
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Inicio
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Productos
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <CartWidget />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <Navbar bg="dark" variant="primary" expand="lg">
+      <Container>
+        <Link to="/"><h2>VALU-VAPE</h2></Link>
+        <NavDropdown style={{fontSize:"1.5rem"}} title="Productos">
+          <NavDropdown.Item > <Link to='/equipos'> <h3>Equipos</h3> </Link> </NavDropdown.Item>
+          <NavDropdown.Item > <Link to='/kits'> <h3>Kits</h3> </Link> </NavDropdown.Item>
+          <NavDropdown.Item > <Link to='/liquidos'> <h3>Líquidos</h3> </Link> </NavDropdown.Item>
+        </NavDropdown>
+        <Link to="/carrito"><CartWidget/></Link>
+      </Container>
+    </Navbar>
   );
 }
-
-export default Navbar;
